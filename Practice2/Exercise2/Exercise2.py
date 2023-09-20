@@ -2,7 +2,7 @@
 import math
 from EvenCalculations import even_numbers
 
-x = int(input("\nВведіть від якого числа (x) знаходити суму парних чисел: "))
+x = int(input("Введіть від якого числа (x) знаходити суму парних чисел: "))
 y = int(input("Введіть до якого числа (y) знаходити суму парних чисел: "))
 
 while x > y:
