@@ -1,14 +1,20 @@
-#Варіант 9
+#Варіант 12
 
-sentence = input("Введіть речення: ")
+sentence = str(input("Введіть речення: \n"))
 
 words = sentence.split() #Розділяємо речення на слова
 
-min_length_word = float('inf') #Присваюємо початке значення як нескінченність
+sorted_words = []
 
-#проходимося по кожному слову та шукаємо довжину найкоротшого
-for word in words:
-    if len(word) < min_length_word:
-        min_length_word = len(word)
+#Сортуємо слова за довжиною в порядку неспадання
+while words:
+    shortest_word = words[0]
+    for word in words:
+        if len(word) <= len(shortest_word):
+            shortest_word = word;
+    sorted_words.append(shortest_word)
+    words.remove(shortest_word)
 
-print(f"Довжина найкоротшого слова у реченні: {min_length_word}")
+print("\nСлова у порядку неспадання довжини: ")
+for word in sorted_words:
+    print(word)
