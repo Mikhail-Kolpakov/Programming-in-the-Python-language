@@ -11,7 +11,7 @@ np.array(percentages)
 
 # Побудова кругової діаграми
 plt.figure(figsize=(10, 10))
-plt.pie(percentages, labels = age_categories, startangle = 140)
+plt.pie(percentages, labels = age_categories, autopct='%1.1f%%', startangle = 140)
 plt.legend(title="Вікові категорії", loc="upper right")
 plt.title("Вікова статистика чоловічого населення України (2017 р.)")
 
