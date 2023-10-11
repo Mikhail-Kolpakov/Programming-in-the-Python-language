@@ -10,7 +10,7 @@ import string
 with open("input.txt", "r") as file:
     input_text = file.read()
 
-words = word_tokenize(input_text)
+words = word_tokenize(input_text) #Токенізація тексту
 
 #Ініціалізація лексичних аналізаторів для стеммінгу та лемматизації
 stemmer = PorterStemmer()
